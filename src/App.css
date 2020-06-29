@@ -1,38 +1,46 @@
+*{
+  padding: 0;
+  margin:0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+
 .App {
   text-align: center;
 }
+body{
+  background-color: grey;
+}
+/* 
+table button {
+  width: 40px;
+  height: 40px;
+  color:red;
+  background-color: black;
+  border-radius: 50%;
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table button:hover {
+border-color: greenyellow;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.tb{
+  position: relative;
+  left:14%;
+  /* top:-4%; */
+  height:40%; 
+  text-align: center;
+  width:500px;
+  height:500px;
+  /* background-color: aqua; */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+} 
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tb table{
+  position:absolute;
+  /* top:2%; */
+  /* left:2%; */
+  /* background-colonr: brown; */
+  /* opacity: 0.9; */
+  /* background-color: grey; */
 }
