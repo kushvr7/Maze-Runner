@@ -142,7 +142,7 @@ setstt({
             if(u == i && v == j)
              {
                grid.mat[i][j] = 2;
-                stt.sty[i][j] = 'red';
+                stt.sty[i][j] = '#b31929';
                 let sr = stt.sty;
               setstt({
                 sty : sr,
@@ -169,7 +169,7 @@ setstt({
             if(u == i && v == j)
              {
                grid.mat[i][j] = 3;
-               stt.sty[i][j] = 'green';
+               stt.sty[i][j] = '#257e3a';
                let sr = stt.sty;
                setstt({
                  sty : sr,
@@ -195,7 +195,7 @@ setstt({
             if(u == i && v == j)
              {
                grid.mat[i][j] = 1;
-               stt.sty[i][j] = 'blue';
+               stt.sty[i][j] = '#0d5fbc';
                let sr = stt.sty;
                setstt({
                  sty : sr,
