@@ -407,12 +407,15 @@ for (let i = 0; i < row.len; i++) {
     <div className="App">
       <Hee/>
       <br/>
-      <Inp gete={getp} />
+      <Inp gete={getp} /><br/>
       {/* <button onClick={ta}>table set</button> */}
-      <button onClick={setterO}>OBSTACKLES</button>
-      <button onClick={setterS}>Start</button>
-      <button onClick={setterE}>End</button>
-      <button onClick={find}>PATH</button>
+      <div id="ree">
+      <button id="obs" onClick={setterO}>Obtacles</button>&nbsp;&nbsp;
+      <button id="sp" onClick={setterS}>Start Point</button>&nbsp;&nbsp;
+      <button id="ep" onClick={setterE}>End Point</button>&nbsp;&nbsp;
+      <button id="se" onClick={find}>SEARCH</button>
+      </div>
+      <br/><br/>
       <div className="tb">
       <table>
       {table}

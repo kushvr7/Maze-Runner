@@ -4,12 +4,21 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap');
 
 .App {
   text-align: center;
 }
 body{
-  background-color: grey;
+  /* background-color: grey; */
+  /* background-color: #161625; */
+  background-color: #22282a;
+}
+#ree button{
+  width:85px;
+  height:30px;
 }
 /* 
 table button {
@@ -26,8 +35,8 @@ border-color: greenyellow;
 
 .tb{
   position: relative;
-  left:14%;
-  /* top:-4%; */
+  left:36%;
+  /* top:200%; */
   height:40%; 
   text-align: center;
   width:500px;
@@ -43,4 +52,41 @@ border-color: greenyellow;
   /* background-colonr: brown; */
   /* opacity: 0.9; */
   /* background-color: grey; */
+}
+
+#obs{
+  border-color: #b31929;
+  background-color: black;
+  border-radius: 4px;
+  color:gold;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+  /* border: none; */
+}
+
+#ep{
+  border-color: #257e3a;
+  background-color: black;
+  border-radius: 4px;
+  color:gold;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+#sp{
+  border-color: #0d5fbc;
+  background-color: black;
+  border-radius: 4px;
+  color:gold;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+#se{
+  border-color: black;
+  background-color: antiquewhite;
+  color: #22282a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
 }

@@ -4,6 +4,14 @@
     border-radius: 7px;
     border: none;
 }
+button{
+    border-color: black;
+    background-color: antiquewhite;
+    color: #22282a;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Hind Siliguri', sans-serif;
+  }
 
 /* div{
     background-color: blue;
