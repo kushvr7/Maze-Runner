@@ -303,7 +303,7 @@ for (let i = 0; i < row.len; i++) {
   for (let j = 0; j < row.len; j++) {
      let c = `s[${i}][${j}]`;
     //  console.log(s[{i}][{j}]);
-    children.push(<td ><button style={{backgroundColor : stt.sty[i][j], width:"40px" , height:"40px",borderRadius:"50%",transition: "0.5s"}} onClick={ () => set(i , j) }></button></td>)
+    children.push(<td ><button style={{backgroundColor : stt.sty[i][j], width:"40px" , height:"40px",borderRadius:"50%",transition: "0.7s"}} onClick={ () => set(i , j) }></button></td>)
     // children.push(<td ><button style={`sty${i}${j}`} onClick={ () => set(i , j) }>({i},{j})</button></td>)
   }
   //Create the parent and add the children
@@ -471,7 +471,7 @@ for (let i = 0; i < row.len; i++) {
   //  xpath.push( DFA(x,y) );
   //  console.log(xpath);
   console.log(alx);
-  //  display();
+   disp();
    
  }
 
@@ -561,7 +561,27 @@ const alx=[];
    }
   }
 
-  console.table( vis);
+  // console.table( vis);
+
+  const disp = () => {
+   
+    for(let op = 1;op< alx.length;op++)
+    {
+       let xa = alx[op].x;
+       let ya = alx[op].y;
+
+      setTimeout( () => { 
+        stt.sty[xa][ya] = 'gold';
+        let sr = stt.sty;
+        setstt({
+        sty : sr,
+      }) }, 1000); 
+
+
+    }
+ 
+
+  }
 
 
   //  }

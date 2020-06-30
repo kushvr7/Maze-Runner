@@ -59,6 +59,7 @@ border-color: goldenrod;
   background-color: black;
   border-radius: 4px;
   color:gold;
+  /* color:#ffee58; */
   cursor: pointer;
   font-family: 'Hind Siliguri', sans-serif;
   /* border: none; */
@@ -69,6 +70,7 @@ border-color: goldenrod;
   background-color: black;
   border-radius: 4px;
   color:gold;
+  /* color:#ffee58; */
   cursor: pointer;
   font-family: 'Hind Siliguri', sans-serif;
 }
@@ -78,13 +80,15 @@ border-color: goldenrod;
   background-color: black;
   border-radius: 4px;
   color:gold;
+  /* color:#ffee58; */
   cursor: pointer;
   font-family: 'Hind Siliguri', sans-serif;
 }
 
 #se{
   border-color: black;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
+  background-color: #ffee58;
   color: #22282a;
   border-radius: 4px;
   cursor: pointer;
