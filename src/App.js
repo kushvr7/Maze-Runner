@@ -180,7 +180,7 @@ setstt({
               setstt({
                 sty : sr,
               })  
-                console.table(stt.sty);
+                // console.table(stt.sty);
              }
           }
       }
@@ -207,7 +207,7 @@ setstt({
                setstt({
                  sty : sr,
                })  
-               console.table(stt.sty);
+              //  console.table(stt.sty);
              }
           }
       }
@@ -233,7 +233,7 @@ setstt({
                setstt({
                  sty : sr,
                })  
-               console.table(stt.sty);
+              //  console.table(stt.sty);
               //  style.backgroundColor="green";
              }
           }
@@ -248,7 +248,7 @@ setstt({
 //=================================
 
 
-      console.table(grid.mat);
+      // console.table(grid.mat);
 
   }
 
@@ -378,12 +378,13 @@ for (let i = 0; i < row.len; i++) {
               //  setstt({
               //    sty : sr,
               //  }) 
-            console.log((xa - 1 )+" , "+ya);
+            // console.log((xa - 1 )+" , "+ya);
             // step++;
             // console.table(me);
         }else{
           if( me[xa - 1][ya] == 0 && grid.mat[xa  - 1][ya] == 3 )
-              { console.log("found with "+ pa[xa][ya] +" steps" );
+              { 
+                // console.log("found with "+ pa[xa][ya] +" steps" );
               //  step = 0;
                break;
             }
@@ -405,11 +406,12 @@ for (let i = 0; i < row.len; i++) {
           sty : sr,
         }) }, 1000);
   
-         console.log((xa + 1) +" , "+ya);
+        //  console.log((xa + 1) +" , "+ya);
 
         }else{
           if( me[xa + 1][ya ] == 0 && grid.mat[xa + 1][ya] == 3 )
-         { console.log("found with "+ pa[xa][ya]  +" steps" );
+         { 
+          //  console.log("found with "+ pa[xa][ya]  +" steps" );
           break;
          }}
         }
@@ -428,11 +430,12 @@ for (let i = 0; i < row.len; i++) {
               sty : sr,
             }) }, 1000);
   
-            console.log(xa  +" , "+ (ya + 1) );
+            // console.log(xa  +" , "+ (ya + 1) );
 
         }else{
           if( me[xa ][ya + 1] == 0 && grid.mat[xa ][ya + 1] == 3 )
-         { console.log("found with "+ pa[xa][ya]  +" steps" );
+         { 
+          //  console.log("found with "+ pa[xa][ya]  +" steps" );
           // step = 0;
           break;
          }}
@@ -452,12 +455,13 @@ for (let i = 0; i < row.len; i++) {
             sty : sr,
           }) }, 1000);
          
-           console.log(xa +" , "+ (ya - 1 ));
+          //  console.log(xa +" , "+ (ya - 1 ));
 
   
           }else{
            if( me[xa ][ya - 1] == 0 && grid.mat[xa ][ya - 1] == 3 )
-           {console.log("found with "+ pa[xa][ya] +" steps" );
+           {
+            //  console.log("found with "+ pa[xa][ya] +" steps" );
     
            break;
           }
@@ -465,7 +469,7 @@ for (let i = 0; i < row.len; i++) {
       }
 
    }
-   console.table(me);
+  //  console.table(me);
   //  DFS();
   }
 
@@ -479,7 +483,7 @@ for (let i = 0; i < row.len; i++) {
     DFA(x,y);
   //  xpath.push( DFA(x,y) );
   //  console.log(xpath);
-  console.log(alx);
+  // console.log(alx);
    disp();
    
  }
