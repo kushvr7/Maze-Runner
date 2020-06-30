@@ -13,6 +13,11 @@ button{
     font-family: 'Hind Siliguri', sans-serif;
   }
 
-/* div{
-    background-color: blue;
-} */
+  span{
+    font-family: 'Hind Siliguri', sans-serif;
+    color:white;
+  }
+
+  input{
+      padding-left:18px;
+  }

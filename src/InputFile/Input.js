@@ -21,7 +21,7 @@ function Input(props) {
 //   console.log("fix   "+ fix.n);
     return (
         <div>
-            Row : <input type="text" className="inp1" onChange={chn} /><br/>
+           <span> Row :</span> <input type="text" className="inp1" onChange={chn} /><br/>
             <button onClick ={ () => props.gete(fix.n)}>BUILD MAZE</button>
         </div>
     )
