@@ -3,6 +3,7 @@ import './App.css';
 import Inp from './InputFile/Input'; 
 import Hee from './Head/Header'; 
 import Radium from 'radium';
+import Inf from './Info/InfoD';
 
 function App() {
  
@@ -26,6 +27,10 @@ const [clo , setclo] = useState({
 const[vis,setvis] = useState({
  vi:[]  
 })
+
+const[hid,sethid] = useState({
+  h:""
+});
 
 // setclo({
 //    for
@@ -129,6 +134,10 @@ const myarr =[];
       vi:v
    });
    
+  sethid({
+    h:"none"
+  })
+
 
 setstt({
  sty : s,
@@ -575,7 +584,7 @@ const alx=[];
         let sr = stt.sty;
         setstt({
         sty : sr,
-      }) }, 1000); 
+      }) }, 2000); 
 
 
     }
@@ -607,7 +616,8 @@ const alx=[];
       {table}
       </table>
       </div>
-
+      <Inf set={hid.h} />
+      {/* style={ { display: `${hid.h}` } } */}
     </div>
   );
 

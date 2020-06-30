@@ -1,0 +1,72 @@
+#p1{
+    position: absolute;
+    top:2%;
+    left:35%;
+    color:gold;
+}
+
+#p1::after{
+    content: "";
+    position: absolute;
+    left:10%;
+    top:20%;
+    display: block;
+    width:50px;
+    height:2px;
+    color:red;
+}
+
+#d1{
+    position: absolute;
+    top:40%;
+    left:25%;
+    width:700px;
+    height:300px;
+    background-color: black;
+    border-radius: 13px;
+}
+
+#r{
+    color:#b31929;
+}
+
+#b{
+    color:#083f7d;
+    position: absolute;
+    left:0%;
+}
+
+#g{
+    color:#185426;
+    position: absolute;
+    left:0%;
+
+}
+
+ul{
+    position: absolute;
+    top:23%;
+    left:2%;
+    color:white;
+    list-style: none;
+}
+
+.ro{
+   color:#ffa07a;
+}
+
+#p2{
+    position:absolute;
+    top:60%;
+    left:0%;
+    font-size: 17px;
+
+}
+
+#gol{
+    color:gold;
+}
+
+.sea{ 
+   color:#FFA07A;
+}
