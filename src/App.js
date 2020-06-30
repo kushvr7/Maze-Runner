@@ -322,13 +322,26 @@ for (let i = 0; i < row.len; i++) {
        let xa = a.shift();
        let ya = b.shift();
         me[xa][ya] = 1;
- 
+  // setTimeout( () => {
+
         if(xa - 1 >=0 && xa - 1 < row.len){
         if(me[xa - 1][ya] == 0 && grid.mat[xa - 1][ya] == 0){
             me[xa - 1][ya] = 1;
             a.push(xa - 1);
             b.push(ya); 
             pa[xa - 1][ya] =  1 + pa[xa][ya];   
+            // stt.sty[xa - 1][ya] = '#6f827a';
+              //  let sr = stt.sty;
+               setTimeout(() => {
+                stt.sty[xa - 1][ya] = '#6f827a';
+                let sr = stt.sty;
+                  setstt({
+                sty : sr,
+              })
+             }, 1000);
+              //  setstt({
+              //    sty : sr,
+              //  }) 
             console.log((xa - 1 )+" , "+ya);
             // step++;
             // console.table(me);
@@ -336,7 +349,8 @@ for (let i = 0; i < row.len; i++) {
           if( me[xa - 1][ya] == 0 && grid.mat[xa  - 1][ya] == 3 )
               { console.log("found with "+ pa[xa][ya] +" steps" );
               //  step = 0;
-               break;}
+               break;
+            }
          }
         }
 
@@ -346,6 +360,18 @@ for (let i = 0; i < row.len; i++) {
          a.push(xa + 1);
          b.push(ya);  
          pa[xa + 1][ya] =  1 + pa[xa][ya];  
+        //  stt.sty[xa + 1][ya] = '#6f827a';
+        //  let sr = stt.sty;
+         setTimeout( () => 
+         {
+          stt.sty[xa + 1][ya] = '#6f827a';
+          let sr = stt.sty;
+           setstt({
+          sty : sr,
+        }) }, 1000);
+        //  setstt({
+        //    sty : sr,
+        //  }) 
          console.log((xa + 1) +" , "+ya);
 
         //  console.table(me);
@@ -363,6 +389,17 @@ for (let i = 0; i < row.len; i++) {
          a.push(xa);
             b.push(ya + 1); 
             pa[xa][ya + 1] =  1 + pa[xa][ya];  
+            // stt.sty[xa][ya + 1] = '#6f827a';
+            // let sr = stt.sty;
+            setTimeout( () => { 
+              stt.sty[xa][ya + 1] = '#6f827a';
+              let sr = stt.sty;
+              setstt({
+              sty : sr,
+            }) }, 2000);
+            // setstt({
+            //   sty : sr,
+            // }) 
             console.log(xa  +" , "+ (ya + 1) );
 
             // console.table(me);
@@ -380,6 +417,17 @@ for (let i = 0; i < row.len; i++) {
            a.push(xa );
            b.push(ya - 1);  
            pa[xa][ya - 1] =  1 + pa[xa][ya];  
+          //  stt.sty[xa][ya - 1] = '#6f827a';
+          //  let sr = stt.sty;
+           setTimeout(() => { 
+            stt.sty[xa][ya - 1] = '#6f827a';
+            let sr = stt.sty; 
+            setstt({
+            sty : sr,
+          }) }, 2000);
+          //  setstt({
+          //    sty : sr,
+          //  }) 
            console.log(xa +" , "+ (ya - 1 ));
 
           //  console.table(me);
@@ -387,12 +435,13 @@ for (let i = 0; i < row.len; i++) {
            if( me[xa ][ya - 1] == 0 && grid.mat[xa ][ya - 1] == 3 )
            {console.log("found with "+ pa[xa][ya] +" steps" );
           //  step = 0;
-           break;}
+           break;
+          }
           }
       }
 
         // console.table(me);
-        
+    // },1000)
    }
    console.table(me);
   //  BFSb()
