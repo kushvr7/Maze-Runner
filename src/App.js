@@ -23,6 +23,10 @@ const [clo , setclo] = useState({
   bgclo: "black",
 });
 
+const[vis,setvis] = useState({
+ vi:[]  
+})
+
 // setclo({
 //    for
 // });
@@ -72,6 +76,7 @@ const [dec , setdec] = useState({
 // console.log(dec.obs);
 
    const s =[];
+   const v=[];
 //=====================================================================
 const myarr =[];
 
@@ -97,6 +102,13 @@ const myarr =[];
         s.push(rt);
       }
    
+       for(let i=0; i < len; i++){
+    let rt=[];
+    for(let j=0; j < len; j++){
+    rt.push(0);
+    }
+    v.push(rt);
+  }
 
 
     for(let i=0; i < len; i++){
@@ -113,7 +125,9 @@ const myarr =[];
       mat : myarr,
     });
 
-   
+   setvis({
+      vi:v
+   });
    
 
 setstt({
@@ -125,6 +139,16 @@ setstt({
   }
 
   // console.log(stt.sty[0][1]);
+  //==========================================
+  // const vis = [];
+  
+  // for(let i=0; i < row.len; i++){
+  //   let rt=[];
+  //   for(let j=0; j < row.len; j++){
+  //   rt.push(0);
+  //   }
+  //   vis.push(rt);
+  // }
 
 //=============================================
 
@@ -279,7 +303,7 @@ for (let i = 0; i < row.len; i++) {
   for (let j = 0; j < row.len; j++) {
      let c = `s[${i}][${j}]`;
     //  console.log(s[{i}][{j}]);
-    children.push(<td ><button style={{backgroundColor : stt.sty[i][j], width:"40px" , height:"40px",borderRadius:"50%"}} onClick={ () => set(i , j) }></button></td>)
+    children.push(<td ><button style={{backgroundColor : stt.sty[i][j], width:"40px" , height:"40px",borderRadius:"50%",transition: "0.5s"}} onClick={ () => set(i , j) }></button></td>)
     // children.push(<td ><button style={`sty${i}${j}`} onClick={ () => set(i , j) }>({i},{j})</button></td>)
   }
   //Create the parent and add the children
@@ -290,7 +314,7 @@ for (let i = 0; i < row.len; i++) {
 
 
 //====================================================
-
+// const vis ;
    const find = () =>{
    
     //  console.log(stt.sty[0][0]);
@@ -299,8 +323,11 @@ for (let i = 0; i < row.len; i++) {
       {
         for(let indd =0;indd<row.len;indd++)
         {
-             if(grid.mat[ind][indd] == 1)
+             if(grid.mat[ind][indd] == 1){
                     BFS(ind , indd);
+                    DFS(ind,indd);
+                    // vis = grid.mat;
+                  }
         }
       }
 
@@ -360,8 +387,7 @@ for (let i = 0; i < row.len; i++) {
          a.push(xa + 1);
          b.push(ya);  
          pa[xa + 1][ya] =  1 + pa[xa][ya];  
-        //  stt.sty[xa + 1][ya] = '#6f827a';
-        //  let sr = stt.sty;
+ 
          setTimeout( () => 
          {
           stt.sty[xa + 1][ya] = '#6f827a';
@@ -369,16 +395,12 @@ for (let i = 0; i < row.len; i++) {
            setstt({
           sty : sr,
         }) }, 1000);
-        //  setstt({
-        //    sty : sr,
-        //  }) 
+  
          console.log((xa + 1) +" , "+ya);
 
-        //  console.table(me);
         }else{
           if( me[xa + 1][ya ] == 0 && grid.mat[xa + 1][ya] == 3 )
          { console.log("found with "+ pa[xa][ya]  +" steps" );
-          // step = 0;
           break;
          }}
         }
@@ -389,20 +411,16 @@ for (let i = 0; i < row.len; i++) {
          a.push(xa);
             b.push(ya + 1); 
             pa[xa][ya + 1] =  1 + pa[xa][ya];  
-            // stt.sty[xa][ya + 1] = '#6f827a';
-            // let sr = stt.sty;
+  
             setTimeout( () => { 
               stt.sty[xa][ya + 1] = '#6f827a';
               let sr = stt.sty;
               setstt({
               sty : sr,
-            }) }, 2000);
-            // setstt({
-            //   sty : sr,
-            // }) 
+            }) }, 1000);
+  
             console.log(xa  +" , "+ (ya + 1) );
 
-            // console.table(me);
         }else{
           if( me[xa ][ya + 1] == 0 && grid.mat[xa ][ya + 1] == 3 )
          { console.log("found with "+ pa[xa][ya]  +" steps" );
@@ -417,39 +435,138 @@ for (let i = 0; i < row.len; i++) {
            a.push(xa );
            b.push(ya - 1);  
            pa[xa][ya - 1] =  1 + pa[xa][ya];  
-          //  stt.sty[xa][ya - 1] = '#6f827a';
-          //  let sr = stt.sty;
+
            setTimeout(() => { 
             stt.sty[xa][ya - 1] = '#6f827a';
             let sr = stt.sty; 
             setstt({
             sty : sr,
-          }) }, 2000);
-          //  setstt({
-          //    sty : sr,
-          //  }) 
+          }) }, 1000);
+         
            console.log(xa +" , "+ (ya - 1 ));
 
-          //  console.table(me);
+  
           }else{
            if( me[xa ][ya - 1] == 0 && grid.mat[xa ][ya - 1] == 3 )
            {console.log("found with "+ pa[xa][ya] +" steps" );
-          //  step = 0;
+    
            break;
           }
           }
       }
 
-        // console.table(me);
-    // },1000)
    }
    console.table(me);
-  //  BFSb()
+  //  DFS();
   }
 
 //=====================================================
+  const xpath=[];
+ const DFS = (x,y) => {
 
- 
+  //  console.log("hy");
+  
+    // vis[x][y] = 1;
+    DFA(x,y);
+  //  xpath.push( DFA(x,y) );
+  //  console.log(xpath);
+  console.log(alx);
+  //  display();
+   
+ }
+
+ let fo = 0;
+//=====================================================
+const alx=[];
+   const DFA = (q,w) => {
+   
+      //  vis[q][w] = 1;
+     let dx = [1,-1,0,0];
+     let dy = [0,0,1,-1];
+// 
+    //  if(q + 1 >=0 && q + 1 < row.len && w >=0 && w <row.len)
+    //  {
+    //       DFA(q+1 )
+    //  }
+
+
+    
+
+   for(let rt=0;rt<4;rt++)
+   {
+    
+       let sx = dx[rt] + q;
+       let sy = dy[rt] + w ;
+       if( sx>=0 && sy>=0 && sx<row.len && sy<row.len){
+       if(vis.vi[sx][sy] == 0 && grid.mat[sx][sy] == 3 )
+       {
+
+        //  vis.vi[sx][sy] = 1;
+        //  let yy = vis.vi;
+        //  setvis({
+        //    vi:yy
+        //  }); 
+        // //  console.log(" x cor :"+sx+"   y cor: "+sy);
+        //     DFA(sx,sy);
+        //     if(fo == 1)
+        //    return alx.push(`x cor :  ${sx}  y cor :${sy}`); 
+
+           fo = 1;
+           let cc ={
+            x : sx,
+            y : sy
+          }
+          return alx.push(cc);
+          //  return  alx.push(`x cor :  ${sx}  y cor :${sy}`);
+
+
+       }
+      
+       else{
+         if(vis.vi[sx][sy] == 0 && grid.mat[sx][sy] == 0)
+            {
+              // fo = 1;
+              //  return  alx.push(`x cor :  ${sx}  y cor :${sy}`);
+
+
+              vis.vi[sx][sy] = 1;
+              let yy = vis.vi;
+              setvis({
+                vi:yy
+              }); 
+             //  console.log(" x cor :"+sx+"   y cor: "+sy);
+                 DFA(sx,sy);
+                 if(fo == 1){
+                   let c ={
+                     x : sx,
+                     y : sy
+                   }
+                  return alx.push(c);
+                 }
+                // return alx.push(`x cor :  ${sx}  y cor :${sy}`); 
+
+
+
+
+
+
+              }
+              // else{
+              //   return false;
+              // }
+         
+             
+       }
+      }
+   }
+  }
+
+  console.table( vis);
+
+
+  //  }
+
+
 //=====================================================
 
   return (
