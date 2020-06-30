@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Maze-Runner/static/css/main.8911b618.chunk.css",
+    "main.js": "/Maze-Runner/static/js/main.4cf410f5.chunk.js",
+    "main.js.map": "/Maze-Runner/static/js/main.4cf410f5.chunk.js.map",
+    "runtime-main.js": "/Maze-Runner/static/js/runtime-main.b517d389.js",
+    "runtime-main.js.map": "/Maze-Runner/static/js/runtime-main.b517d389.js.map",
+    "static/js/2.4a4f3b92.chunk.js": "/Maze-Runner/static/js/2.4a4f3b92.chunk.js",
+    "static/js/2.4a4f3b92.chunk.js.map": "/Maze-Runner/static/js/2.4a4f3b92.chunk.js.map",
+    "index.html": "/Maze-Runner/index.html",
+    "precache-manifest.07be4c4ed4c8e80a31158c00faec9034.js": "/Maze-Runner/precache-manifest.07be4c4ed4c8e80a31158c00faec9034.js",
+    "service-worker.js": "/Maze-Runner/service-worker.js",
+    "static/css/main.8911b618.chunk.css.map": "/Maze-Runner/static/css/main.8911b618.chunk.css.map",
+    "static/js/2.4a4f3b92.chunk.js.LICENSE.txt": "/Maze-Runner/static/js/2.4a4f3b92.chunk.js.LICENSE.txt",
+    "static/media/heade.css": "/Maze-Runner/static/media/mpi.a65e2945.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b517d389.js",
+    "static/js/2.4a4f3b92.chunk.js",
+    "static/css/main.8911b618.chunk.css",
+    "static/js/main.4cf410f5.chunk.js"
+  ]
+}
