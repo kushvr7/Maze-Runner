@@ -13,10 +13,12 @@ function InfoD(props) {
 
         <div style={sty} id="d1">
             <p id="p1">Instructions :</p>
+            <span className="cal">(&nbsp;&nbsp; <span className="grap">BFS & DFS</span> Algorithm used in the Project as major backbone &nbsp;&nbsp;  ) </span>
             <ul>
                 <li><span id="r" className="com">RED :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span className="cont">are the Obstacles dynamically created</span>  </li>
                 <li><span id="b" className="com">BLUE :</span> <span className="cont"> is the Start self choosen</span>  </li>
                 <li><span id="g" className="com">GREEN :</span> <span className="cont"> is the Exit self choosen </span> </li>
+                <li><span id="gry" className="com">GREY :</span> <span className="cont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is the Traversed path by the algorithm </span> </li>
              </ul>
              <p id="p2">
                Firstly provide the size of maze in <span className="ro">Row</span> input field above and start .  Place every required component as per your choice . After placing entry , exit and hurdles press button <span className="sea">( Search )</span>.

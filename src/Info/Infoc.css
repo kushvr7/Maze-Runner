@@ -1,6 +1,6 @@
 #p1{
     position: absolute;
-    top:2%;
+    top:1%;
     left:35%;
     color:gold;
 }
@@ -21,9 +21,14 @@
     top:40%;
     left:25%;
     width:700px;
-    height:300px;
+    height:340px;
     background-color: black;
     border-radius: 13px;
+}
+
+.grap{
+    font-size: 23px;
+    color:red;
 }
 
 #r{
@@ -45,14 +50,28 @@
 
 ul{
     position: absolute;
-    top:23%;
-    left:2%;
+    top:25%;
+    left:4%;
     color:white;
     list-style: none;
 }
 
+.cal{
+    position: absolute;
+    top:14%;
+    left:15%;
+}
+
+
 .ro{
    color:#ffa07a;
+}
+
+#gry{
+    color:grey;
+    position: absolute;
+    left:0%;
+
 }
 
 #p2{
