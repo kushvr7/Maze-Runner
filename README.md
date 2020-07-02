@@ -3,7 +3,7 @@
 
 <table>
   <tr>
-    <td><img src="images/maze.gif" height="300px" width="550px"  /></td>
+    <td><img src="images/maze.gif" height="400px" width="690px"  /></td>
     <td> This is the glimpes of the project . <br/>
    It is developed using <b>react js</b> , <br/>which is a library of a <b>js</b> (javascript) .
    <b>EXTRA PACKAGES USED ARE :</b>
